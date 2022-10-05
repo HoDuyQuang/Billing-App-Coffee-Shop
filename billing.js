@@ -74,8 +74,7 @@ function order() {
         sumOrdered += order.price * order.quantity;
         total += order.quantity;
     })
-    document.getElementById("amount").innerHTML = sumOrdered;
-    document.getElementById("sumDrinks").innerHTML = total;
+    
     console.log(orderList);
 }
 function clearData() {
@@ -87,6 +86,11 @@ function clearData() {
     document.querySelector("#orderedDetails").innerHTML = "";
     document.querySelector("#sumDrinks").innerHTML = "";
     document.querySelector("#amount").innerHTML = "";
+    orderList = [];
+    total = 0;
+    sumOrdered = 0;
+    document.getElementById("amount").innerHTML = sumOrdered;
+    document.getElementById("sumDrinks").innerHTML = total;
 }
 
 function deleteRow(orderedIndex) {
